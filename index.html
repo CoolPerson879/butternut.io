@@ -1,10 +1,132 @@
+
+<!DOCTYPE html>
+<html>
 <head>
+<meta charset="utf-8">
+<title>The New COVID-19 Tracker</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-  body{
-    font-family: "sans-serif";}
+  #embeddev{
+    margin: 30px;
+  }
+  .qwerty {
+        font-family: 'Poppins', serif;
+        color:white;
+      }
+  .sidebar { 
+			height: 100%; 
+			width: 0; 
+			position: fixed; 
+			/*Stays in place */ 
+			background-color: #303630; 
+			/*Grey*/ 
+			overflow-x: hidden; 
+      color:white;
+      z-index: 12;
+			/*for Disabling horizontal scroll */ 
+		} 
+		/* Position and style for the sidebar links */ 
+		
+		.sidebar a { 
+			padding: 10px 10px 10px; 
+			font-size: 25px; 
+			color: #ffffff; 
+			display: block; 
+			transition: 0.3s; 
+		} 
+		/* the links change color when mouse hovers upon them*/ 
+		
+		.sidebar a:hover { 
+			color: #ffffff; 
+		} 
+		/* Position and style the for cross button */ 
+		
+		.sidebar .closebtn { 
+			position: absolute; 
+			top: 0; 
+			right: 25px; 
+		} 
+		/* Style for the sidebar button */ 
+		
+		.openbtn { 
+			font-size: 25px; 
+			background-color: #000000; 
+			color: #ffffff; 
+			padding: 10px 10px 10px; 
+			border: none;
+      position: fixed;
+      z-index: 12;
+		} 
+		/* the sidebar button changes 
+	color when mouse hovers upon it */ 
+.openbtn:hover { 
+color: #FFFFFF; 
+} 
+
+	/* pushes the page content to the right 
+	when you open the side navigation */ 
+		
+		#main { 
+			transition: margin-left .5s; 
+			/* If you want a transition effect */ 
+			padding: 10px; 
+		}
 </style>
 </head>
 <body>
-<h1>Hello World!</h1>
-  <a href="rajscape.com">Raj Scape</a>
+<div id="sidebar" class="sidebar">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+×
+</a>
+
+<a href="spread.html">Stay Safe</a>
+<a href="index.html">Home</a>
+<a href="#map">Map Beta</a>
+<a href="darkmode.html">Dark Mode Lite</a>
+<a href="#">Continents Coming Soon!</a>
+<a href="#embeddev">Developer</a>
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">
+Links
+</button>
+
+</div>
+<script> 
+	/* Sets the width of the sidebar 
+	to 250 and the left margin of the 
+	page content to 250 */ 
+	function openNav() { 
+		document.getElementById( 
+		"sidebar").style.width = "250px"; 
+		document.getElementById( 
+		"main").style.marginLeft = "250px"; 
+	} 
+
+	/* Set the width of the sidebar 
+	to 0 and the left margin of the 
+	page content to 0 */ 
+	function closeNav() { 
+		document.getElementById( 
+		"sidebar").style.width = "0"; 
+		document.getElementById( 
+		"main").style.marginLeft = "0"; 
+	} 
+</script>
+<div id="header">
+<h1 class="qwerty">New Coronavirus Tracker</h1>
+<h3 class="qwerty">This Is Where You Can Get All COVID -19 Info
+</h3>
+<h3>SHARE THIS PAGE
+<a href="linkshare.html" target="_blank" class="oddaout"><img src="https://image.flaticon.com/icons/png/512/2089/2089782.png" height = 30px></a></h3>
+</div><br>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4a860e-edf5-45a1-9348-f7e008012ac6"></div>
 </body>
+<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="map" title="World Map New" src="//www.arcgis.com/apps/Embed/index.html?webmap=d73291008b014393a21c2ad324049e70&extent=-123.1252,-16.3821,60.742,65.1097&home=true&zoom=true&previewImage=false&scale=true&basemap_gallery=true&disable_scroll=true&theme=light"></iframe></div>
+<br>
+<br>
+ <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7820148.js"></script> 
+</html>
